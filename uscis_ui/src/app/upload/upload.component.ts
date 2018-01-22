@@ -1,4 +1,4 @@
-﻿import { Component, ElementRef, VERSION, Renderer2, ViewChild, OnInit } from '@angular/core';
+﻿import { Component, ElementRef, VERSION, Renderer2, ViewChild, OnInit, Input} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AlertService, AuthenticationService } from '../_services/index';
@@ -11,14 +11,13 @@ import '../../assets/app.css';
     templateUrl: 'upload.component.html'
 })
 
-export class UploadComponent implements OnInit{
-    model: any = {};
+export class UploadComponent implements OnInit {
+    uniqueCode: string;
     name : string;
     message: string;
    
 
     ngOnInit(){
-    console.log(this.model.uniquecode);
     }
     @ViewChild('fileInput') el:ElementRef;
 
@@ -29,9 +28,7 @@ export class UploadComponent implements OnInit{
       }
       
       fileUpload() {
-        console.log(this.el);
-        console.log(this.model.uniquecode);
-
+        console.log(this.uniqueCode);
         this.message = "File uploaded is :"+this.el.nativeElement.files[0].name;
         console.log(this.message);
       }
@@ -40,7 +37,5 @@ export class UploadComponent implements OnInit{
           console.log('test back login');
         this.router.navigate(['login']);
       }
-
-
    
 }
