@@ -1,0 +1,36 @@
+﻿
+
+<head>
+        <style>
+        button{
+        border: none;
+        color: gray;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        text-decoration-color: black;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 8px;
+        margin: 4px 2px;
+    }
+        </style>
+    </head>
+    <div class="col-md-7 col-md-offset-2">
+        <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !uniquecode.valid }">
+                <label for="uniquecode">uniquecode:</label>
+                <input type="text" class="form-control" name="uniquecode" [(ngModel)]="model.uniquecode" #uniquecode="ngModel" required />
+                <div *ngIf="f.submitted && !uniquecode.valid" class="help-block">uniquecode is required</div>
+            </div>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+            </div>
+            <div class="col-md-offset-4 form-group">
+                <button>Sign In</button>    
+            </div>
+        </form>
+    </div>
+    
