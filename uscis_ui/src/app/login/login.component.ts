@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
+        console.log('login func');
         this.router.navigate(['upload']);
         //use below logic for calling back end api 
         // this.loading = true;
