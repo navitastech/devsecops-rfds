@@ -8,18 +8,8 @@ a {
 }
 
 
-#uploadbutton{
-    border: none;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 6px;
-    width: auto;
-    margin: 2px 2px;
-}
 div.padding{
-    margin:10%;
+    margin:5%;
     text-align: right;
 }
 #outer
@@ -30,4 +20,16 @@ div.padding{
 .inner
 {
     display: inline-block;
+}
+button{
+    border: none;
+    color: gray;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: black;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 10px 18px;
 }

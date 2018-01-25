@@ -1,5 +1,48 @@
-# angular2-registration-login-example-cli
+# Angular4 with Webpack3
+> This is a skeleton project that is using Angular 4 and bundling with Webpack 3. Find out more about the project, check out blog [Setting up Angular 4 Typescript with Webpack 3](https://nguyentr.com/setting-up-angular-4-typescript-with-webpack-3)
 
-Angular 2/5 User Registration and Login Example with Angular CLI
+## Precondition
+Make sure you have Node version >= 6.9.0 and NPM >= 3.10.0
+You can check by runing commands below,
+```
+npm -v
+node -v
+```
 
-To see a demo and further details go to http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+## Installation
+```
+npm install
+```
+
+## Build
+### Development
+```
+npm run build:dev
+```
+
+### Production
+```
+npm run build
+```
+
+## Runing the app
+### Development
+```
+npm start
+```
+
+### Production (Serve assets from dist/)
+```
+npm run server
+```
+Start browser with http://localhost:4200
+
+## Lint
+```
+npm run lint
+```
+
+## Clean (dist/)
+```
+npm run clean
+```
