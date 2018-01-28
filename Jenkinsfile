@@ -16,7 +16,7 @@ node {
 
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
-            sh 'source ~/.bashrc && nvm current'
+            sh 'source ~/.bashrc && nvm current && npm install'
         }
     }
 
